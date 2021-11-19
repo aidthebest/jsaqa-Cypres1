@@ -16,7 +16,7 @@ it("shouldAddBookToFavorites", () => {
   cy.contains("NeEsenin").should("be.visible");
 });
 
-it.only("shoulDeleteBookFromFavorites", () => {
+it("shoulDeleteBookFromFavorites", () => {
   cy.login("test@test.com", "test");
   cy.addBookWithFavorite("asc", "Something go0d", "Some guy");
   cy.wait(1000);
