@@ -12,7 +12,8 @@ Cypress.Commands.add("checkIfElementInvalid", (selector) => {
 });
 
 Cypress.Commands.add("addBook", (title, description, authors) => {
-  cy.contains("Book").click();
+  cy.wait(1000);
+  cy.contains("Books").click();
   cy.contains("Add new").click();
   cy.get("#title").type(title);
   cy.get("#description").type(description);
@@ -21,11 +22,13 @@ Cypress.Commands.add("addBook", (title, description, authors) => {
 });
 
 Cypress.Commands.add("addBookWithFavorite", (title, description, authors) => {
-  cy.contains("Book").click();
+  cy.wait(1000);
+  cy.contains("Books").click();
   cy.contains("Add new").click();
   cy.get("#title").type(title);
   cy.get("#description").type(description);
   cy.get("#authors").type(authors);
+  cy.wait(1000);
   cy.get("#favorite").click();
   cy.contains("Submit").click();
 });

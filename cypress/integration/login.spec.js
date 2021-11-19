@@ -1,7 +1,3 @@
-beforeEach(() => {
-  cy.visit("/booksNode");
-});
-
 it("Should open the main page", () => {
   cy.contains("Books list");
 });
