@@ -1,3 +1,7 @@
+beforeEach(() => {
+  cy.visit("/");
+});
+
 it("Should open the main page", () => {
   cy.contains("Books list");
 });

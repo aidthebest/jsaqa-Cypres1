@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "headTestChrome": "npm run test -- --headed --browser chrome",
-    "headlessTestChrome": "npm run test -- --headless --browser chrome",
-    "headTestFireFox": "npm run test -- --headed --browser firefox",
-    "headlessTestFireFox": "npm run test -- --headless --browser firefox"
+    "test": "npx cypress run -b chrome --headed",
+    "headTestChrome": "npx cypress run -b chrome --headed -C cypress.env.json",
+    "headlessTestChrome": "npx cypress run -b chrome",
+    "headTestElectron": "npx cypress run -b electron --headed -C cypress.json",
+    "headlessTestElectron": "npx cypress run -b electron"
   },
   "author": "AM",
   "license": "ISC",
