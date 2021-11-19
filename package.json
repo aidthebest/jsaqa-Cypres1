@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "headTestChrome": "npm run test -- --headed --browser chrome",
+    "headlessTestChrome": "npm run test -- --headless --browser chrome",
+    "headTestFireFox": "npm run test -- --headed --browser firefox",
+    "headlessTestFireFox": "npm run test -- --headless --browser firefox"
   },
   "author": "AM",
   "license": "ISC",
